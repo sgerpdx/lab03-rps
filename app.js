@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
 
-import { handBattle } from './utils.js';
+import { handScore, handBattle } from './utils.js';
 
 const handButton = document.getElementById('hand-button');
 const yourHand = document.getElementById('your-hand');
