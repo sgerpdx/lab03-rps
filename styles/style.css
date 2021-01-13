@@ -30,6 +30,12 @@ header {
     align-items: center;
 }
 
+.game-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 section {
     width: 1000px;
     max-width: 80%;
