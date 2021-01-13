@@ -2,15 +2,16 @@
 
 ## HTML:
 
-- 2x radio buttons w/ attributes:
+- 3x radio buttons w/ attributes:
     * name, type, value
-    * photos to correspond to 'heads' and 'tails'
-- a button to simulate the user tossing their coin
+    * photos to correspond to 'rock,' 'paper,' and 'scissors'
+- a button to simulate the user choosing their hand
 - divs for each element of info:
     * wins
-    * total tosses
-    * current toss guess
-    * current toss result
+    * total hands
+    * current hand choice
+    * current opponent choice
+    * current result
     * feedback message
 
 ## JavaScript:
