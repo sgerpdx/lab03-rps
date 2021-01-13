@@ -1,5 +1,6 @@
 // import functions and grab DOM elements
-console.log('Hey');
+
+import { handBattle } from './utils.js';
 
 const handButton = document.getElementById('hand-button');
 const yourHand = document.getElementById('your-hand');
@@ -10,12 +11,7 @@ const totalHands = document.getElementById('total-hands');
 
 // const winPercent = document.getElementById('win-percent');
 
-console.log(handButton);
-console.log(yourHand);
-console.log(oppHand);
-console.log(feedbackMsg);
-console.log(handsWon);
-console.log(totalHands);
+
 
 
 
