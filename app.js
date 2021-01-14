@@ -2,7 +2,6 @@
 import { handScore } from './utils.js';
 
 const handButton = document.getElementById('hand-button');
-const yourHand = document.getElementById('your-hand');
 const feedbackMsg = document.getElementById('feedback');
 const handsWon = document.getElementById('hands-won');
 const totalHands = document.getElementById('total-hands');
@@ -21,7 +20,15 @@ handButton.addEventListener('click', () => {
 
         winCount++;
         console.log('win');
+        feedbackMsg.textContent = 'You win!';
 
+    } else if (playerHand - oppHand === 0) {
+
+        feedbackMsg.textContent = 'A draw! How about a rematch?';
+
+    } else {
+
+        feedbackMsg.textContent = 'Tough loss -- try again?';
     }
 
     playCount++;
@@ -33,8 +40,6 @@ handButton.addEventListener('click', () => {
 
     const winPercent = (Math.ceil((winCount / playCount) * 100));
 
-    yourHand.textContent = playerHand.value;
-    feedbackMsg.textContent = 'Thanks for Playing!';
     handsWon.textContent = `You have won ${winCount} hands`;
     totalHands.textContent = `out of ${playCount} total hands.`;
     successRate.textContent = `for a success rate of ${winPercent}%.`;

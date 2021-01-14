@@ -70,7 +70,6 @@ section {
     justify-content: center;
     align-items: center;
     padding: 40px;
-    border-style: double;
     border-radius: 10px;
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Kiefer_Holz.JPG/1024px-Kiefer_Holz.JPG");
     background-color: lavenderblush;
@@ -106,6 +105,11 @@ input {
 
 input:checked + img {
     border: solid 10px brown;
+}
+
+#opp-hand {
+    font-size: 1.5rem;
+    color: blue;
 }
   
   /* @keyframes pulse {
