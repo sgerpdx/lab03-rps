@@ -2,11 +2,11 @@
 
 export function handScore(playerChoice) {
 
-    if (playerChoice.value === 'rock') {
+    if (playerChoice === 'rock') {
 
         return 1;
 
-    } else if (playerChoice.value === 'paper') {
+    } else if (playerChoice === 'paper') {
 
         return 2;
 
