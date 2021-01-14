@@ -16,12 +16,11 @@ let playCount = 0;
 handButton.addEventListener('click', () => {
 
     const compHand = Math.ceil(Math.random() * 3);
-    const playerHand = handScore(document.querySelector('input:checked'));
+    const playerHand = handScore((document.querySelector('input:checked')).value);
 
     if (didUserWin(playerHand, compHand) === 'win') {
 
         winCount++;
-        console.log('win');
         feedbackMsg.textContent = 'You win!';
 
     } else if (didUserWin(playerHand, compHand) === 'draw') {
@@ -36,11 +35,6 @@ handButton.addEventListener('click', () => {
 
 
     playCount++;
-
-    console.log(winCount);
-    console.log(playCount);
-    console.log(compHand);
-    console.log(playerHand);
 
     const winPercent = (Math.ceil((winCount / playCount) * 100));
     const opponentHand = getRandomThrow(compHand);
