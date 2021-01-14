@@ -75,7 +75,9 @@ content {
     align-items: center;
 }
 
-
+input:checked + img {
+    display: flex;
+}
   
   /* @keyframes pulse {
     20% {
