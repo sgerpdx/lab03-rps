@@ -73,6 +73,19 @@ section {
     border-radius: 10px;
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Kiefer_Holz.JPG/1024px-Kiefer_Holz.JPG");
     background-color: lavenderblush;
+    width: 500px;
+}
+
+.versus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    color: blue;
+    font-weight: bold;
+    font-size: 2rem;
+    width: 320px;
+    padding: 20px 0px 10px 0px;
 }
 
 .button-box {

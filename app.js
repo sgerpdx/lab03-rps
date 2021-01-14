@@ -1,5 +1,6 @@
 
 import { handScore } from './utils.js';
+import { getRandomThrow } from './get-random-throw.js';
 
 const handButton = document.getElementById('hand-button');
 const feedbackMsg = document.getElementById('feedback');
