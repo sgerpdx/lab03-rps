@@ -1,5 +1,5 @@
 
-import { handScore, handBattle } from './utils.js';
+import { handScore } from './utils.js';
 
 const handButton = document.getElementById('hand-button');
 const yourHand = document.getElementById('your-hand');
@@ -12,20 +12,17 @@ let winCount = 0;
 let playCount = 0;
 
 
-
 handButton.addEventListener('click', () => {
 
     const oppHand = Math.ceil(Math.random() * 3);
-
     const playerHand = handScore(document.querySelector('input:checked'));
 
-    const result = (handBattle(playerHand.value, oppHand));
-
-    if (result === 1) {
+    if ((playerHand - oppHand === 1) || (playerHand - oppHand === -2)) {
 
         winCount++;
-    }
+        console.log('win');
 
+    }
 
     playCount++;
 
@@ -33,8 +30,6 @@ handButton.addEventListener('click', () => {
     console.log(playCount);
     console.log(oppHand);
     console.log(playerHand);
-    console.log('result');
-    console.log(result);
 
     yourHand.textContent = playerHand.value;
     feedbackMsg.textContent = 'Thanks for Playing!';
