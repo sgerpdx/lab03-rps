@@ -25,3 +25,19 @@
 - Math.random variable to generate toss result
 - Function in utils to evaluate guess vs result
 - Tests to TDDevelop the Function
+
+
+## Table demonstrating mathematical basis of awarding 'win' to a value of -1 or 2 for (user-computer) equation:
+
+|   User   | # Score | Computer | # Score | Win Score | Draw Score | Lose Score |
+|:--------:|:-------:|:--------:|:-------:|:---------:|:----------:|:----------:|
+|   Rock   |    1    |   Rock   |    1    |           |      0     |            |
+|   Rock   |    1    |   Paper  |    2    |           |            |     -1     |
+|   Rock   |    1    | Scissors |    3    |     -2    |            |            |
+|   Paper  |    2    |   Rock   |    1    |     1     |            |            |
+|   Paper  |    2    |   Paper  |    2    |           |      0     |            |
+|   Paper  |    2    | Scissors |    3    |           |            |     -1     |
+| Scissors |    3    |   Rock   |    1    |           |            |      2     |
+| Scissors |    3    |   Paper  |    2    |     1     |            |            |
+| Scissors |    3    | Scissors |    3    |           |      0     |            |
+|          |         |          |         |           |            |            |
