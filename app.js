@@ -1,6 +1,7 @@
 
-import { handScore, didUserWin } from './utils.js';
+import { handScore, didUserWin, generate } from './utils.js';
 import { getRandomThrow } from './get-random-throw.js';
+
 
 const handButton = document.getElementById('hand-button');
 const feedbackMsg = document.getElementById('feedback');
@@ -15,19 +16,18 @@ let playCount = 0;
 
 handButton.addEventListener('click', () => {
 
-    const compHand = Math.ceil(Math.random() * 3);
     const playerHand = handScore((document.querySelector('input:checked')).value);
 
-    if (didUserWin(playerHand, compHand) === 'win') {
+    if (didUserWin(playerHand) === 'win') {
 
         winCount++;
         feedbackMsg.textContent = 'You win!';
 
-    } else if (didUserWin(playerHand, compHand) === 'draw') {
+    } else if (didUserWin(playerHand) === 'draw') {
 
         feedbackMsg.textContent = 'A draw! How about a rematch?';
 
-    } else if (didUserWin(playerHand, compHand) === 'lose') {
+    } else if (didUserWin(playerHand) === 'lose') {
 
         feedbackMsg.textContent = 'Tough loss -- try again?';
 
@@ -37,7 +37,7 @@ handButton.addEventListener('click', () => {
     playCount++;
 
     const winPercent = (Math.ceil((winCount / playCount) * 100));
-    const opponentHand = getRandomThrow(compHand);
+    const opponentHand = getRandomThrow(generate());
 
     handsWon.textContent = `You have won ${winCount} hands`;
     totalHands.textContent = `out of ${playCount} total hands.`;

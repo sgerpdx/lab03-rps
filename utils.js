@@ -18,13 +18,13 @@ export function handScore(playerChoice) {
 }
 
 
-export function didUserWin(player, computer) {
+export function didUserWin(player) {
 
-    if ((player - computer === 1) || (player - computer === -2)) {
+    if ((player - generate() === 1) || (player - generate() === -2)) {
 
         return 'win';
 
-    } else if (player - computer === 0) {
+    } else if (player - generate() === 0) {
 
         return 'draw';
 
@@ -33,4 +33,9 @@ export function didUserWin(player, computer) {
         return 'lose';
 
     }
+}
+
+export function generate(){
+    let compHand = Math.ceil(Math.random() * 3);
+    return compHand;
 }
